@@ -27,27 +27,52 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: HomeScreen(),
+      home: ApplianceSelectionScreen(),
     );
   }
 }
 
-class HomeScreen extends StatelessWidget {
+
+class ApplianceSelectionScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Welcome to the Assistant'),
+        title: Text('Select an Appliance'),
       ),
       body: Center(
-        child: ElevatedButton(
-          onPressed: () {
-            Navigator.push(
-              context,
-              MaterialPageRoute(builder: (context) => ChatScreen()),
-            );
-          },
-          child: Text('Initialize a Session'),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[
+            ElevatedButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => ChatScreen(
+                      assistantId: 'asst_dmDDvtYeFlpkTTMW2XqUS1oL',
+                      instructions: 'You are a helpful assistant whose job is to understand the attached manual to the SKS CR3001P 30-inch Integrated Column Refrigerator. You can just call it "your fridge". You then answer questions about the fridge for users. Do not provide references to where in the document you found the information.',
+                    ),
+                  ),
+                );
+              },
+              child: Text('Fridge Manual'),
+            ),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => ChatScreen(
+                      assistantId: 'asst_MvvekqgiAczbSAuyqU9MmKh7',
+                      instructions: 'You are a helpful assistant whose job is to understand the attached manual to the Bosch 800 Series Combination Oven 30. You can just call it "your oven/microwave". You then answer questions about the oven for users. Do not provide references to where in the document you found the information.',
+                    ),
+                  ),
+                );
+              },
+              child: Text('Oven Manual'),
+            ),
+          ],
         ),
       ),
     );
@@ -55,6 +80,11 @@ class HomeScreen extends StatelessWidget {
 }
 
 class ChatScreen extends StatefulWidget {
+  final String assistantId;
+  final String instructions;
+
+  ChatScreen({Key? key, required this.assistantId, required this.instructions}) : super(key: key);
+
   @override
   _ChatScreenState createState() => _ChatScreenState();
 }
@@ -64,7 +94,6 @@ class _ChatScreenState extends State<ChatScreen> {
   final TextEditingController _textController = TextEditingController();
   final ScrollController _scrollController = ScrollController();
   String? threadId;
-  String assistantId = dotenv.env['ASSISTANT_ID'] ?? 'asst_dmDDvtYeFlpkTTMW2XqUS1oL';
   int _lastMessageTimestamp = 0;
   bool _isLoading = false;
   @override
@@ -265,8 +294,8 @@ Widget _buildTypingIndicator() {
         'OpenAI-Beta': 'assistants=v1',
       },
       body: json.encode({
-        'assistant_id': assistantId,
-        'instructions': 'You are a helpful assistant whose job is to understand the attached manual to the SKS CR3001P 30-inch Integrated Column Refrigerator. You can just call it "your fridge". You then answer questions about the fridge for users. Do not provide references to where in the document you found the information.'
+        'assistant_id': widget.assistantId,
+        'instructions': widget.instructions,
       }),
     );
     print(runResponse.statusCode);
