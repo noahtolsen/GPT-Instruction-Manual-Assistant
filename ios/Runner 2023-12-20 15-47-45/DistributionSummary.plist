@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>flutter_application_1.ipa</key>
+	<array>
+		<dict>
+			<key>architectures</key>
+			<array>
+				<string>arm64</string>
+			</array>
+			<key>buildNumber</key>
+			<string>1</string>
+			<key>certificate</key>
+			<dict>
+				<key>SHA1</key>
+				<string>7BA58368F90F78E4942C94348880A602387DE32E</string>
+				<key>dateExpires</key>
+				<string>12/19/24</string>
+				<key>type</key>
+				<string>Cloud Managed Apple Distribution</string>
+			</dict>
+			<key>embeddedBinaries</key>
+			<array>
+				<dict>
+					<key>architectures</key>
+					<array>
+						<string>arm64</string>
+					</array>
+					<key>buildNumber</key>
+					<string>1.0</string>
+					<key>certificate</key>
+					<dict>
+						<key>SHA1</key>
+						<string>7BA58368F90F78E4942C94348880A602387DE32E</string>
+						<key>dateExpires</key>
+						<string>12/19/24</string>
+						<key>type</key>
+						<string>Cloud Managed Apple Distribution</string>
+					</dict>
+					<key>name</key>
+					<string>App.framework</string>
+					<key>team</key>
+					<dict>
+						<key>id</key>
+						<string>Y2T5JLYZRA</string>
+						<key>name</key>
+						<string>Noah Olsen</string>
+					</dict>
+					<key>versionNumber</key>
+					<string>1.0</string>
+				</dict>
+				<dict>
+					<key>architectures</key>
+					<array>
+						<string>arm64</string>
+					</array>
+					<key>buildNumber</key>
+					<string>1.0</string>
+					<key>certificate</key>
+					<dict>
+						<key>SHA1</key>
+						<string>7BA58368F90F78E4942C94348880A602387DE32E</string>
+						<key>dateExpires</key>
+						<string>12/19/24</string>
+						<key>type</key>
+						<string>Cloud Managed Apple Distribution</string>
+					</dict>
+					<key>name</key>
+					<string>Flutter.framework</string>
+					<key>team</key>
+					<dict>
+						<key>id</key>
+						<string>Y2T5JLYZRA</string>
+						<key>name</key>
+						<string>Noah Olsen</string>
+					</dict>
+					<key>versionNumber</key>
+					<string>1.0</string>
+				</dict>
+				<dict>
+					<key>architectures</key>
+					<array>
+						<string>arm64</string>
+					</array>
+					<key>buildNumber</key>
+					<string>1</string>
+					<key>certificate</key>
+					<dict>
+						<key>SHA1</key>
+						<string>7BA58368F90F78E4942C94348880A602387DE32E</string>
+						<key>dateExpires</key>
+						<string>12/19/24</string>
+						<key>type</key>
+						<string>Cloud Managed Apple Distribution</string>
+					</dict>
+					<key>name</key>
+					<string>url_launcher_ios.framework</string>
+					<key>team</key>
+					<dict>
+						<key>id</key>
+						<string>Y2T5JLYZRA</string>
+						<key>name</key>
+						<string>Noah Olsen</string>
+					</dict>
+					<key>versionNumber</key>
+					<string>0.0.1</string>
+				</dict>
+			</array>
+			<key>entitlements</key>
+			<dict>
+				<key>application-identifier</key>
+				<string>Y2T5JLYZRA.noahtolsenBundleIdentifierOne</string>
+				<key>com.apple.developer.team-identifier</key>
+				<string>Y2T5JLYZRA</string>
+				<key>get-task-allow</key>
+				<false/>
+			</dict>
+			<key>name</key>
+			<string>Runner.app</string>
+			<key>profile</key>
+			<dict>
+				<key>UUID</key>
+				<string>6a0cca84-2801-4281-b898-f9e3b1fe54df</string>
+				<key>dateExpires</key>
+				<string>12/19/24</string>
+				<key>name</key>
+				<string>iOS Team Ad Hoc Provisioning Profile: noahtolsenBundleIdentifierOne</string>
+			</dict>
+			<key>team</key>
+			<dict>
+				<key>id</key>
+				<string>Y2T5JLYZRA</string>
+				<key>name</key>
+				<string>Noah Olsen</string>
+			</dict>
+			<key>versionNumber</key>
+			<string>1.0.0</string>
+		</dict>
+	</array>
+</dict>
+</plist>
